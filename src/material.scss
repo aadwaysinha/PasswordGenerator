@@ -1,0 +1,114 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$matprimary: (
+  50: #e0e2f0,
+  100: #b3b6d9,
+  200: #8086c0,
+  300: #4d56a7,
+  400: #263194,
+  500: #000d81,
+  600: #000b79,
+  700: #00096e,
+  800: #000764,
+  900: #000351,
+  A100: #8484ff,
+  A200: #5151ff,
+  A400: #1e1eff,
+  A700: #0404ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$matsecondary: (
+  50: #e1e9f6,
+  100: #b5c9e9,
+  200: #84a5da,
+  300: #5380cb,
+  400: #2e65bf,
+  500: #094ab4,
+  600: #0843ad,
+  700: #063aa4,
+  800: #05329c,
+  900: #02228c,
+  A100: #b8c4ff,
+  A200: #859aff,
+  A400: #526fff,
+  A700: #395aff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$matwarning: (
+  50: #fbeaea,
+  100: #f5cbcb,
+  200: #eea8a8,
+  300: #e78585,
+  400: #e16a6a,
+  500: #dc5050,
+  600: #d84949,
+  700: #d34040,
+  800: #ce3737,
+  900: #c52727,
+  A100: #ffffff,
+  A200: #ffcfcf,
+  A400: #ff9c9c,
+  A700: #ff8383,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$passGen-palette-primary: mat-palette($matprimary);
+$passGen-palette-accent: mat-palette($matsecondary);
+$passGen-palette-warn: mat-palette($matwarning);
+
+$passGen-theme: mat-light-theme(
+  $passGen-palette-primary,
+  $passGen-palette-accent,
+  $passGen-palette-warn
+);
+
+@include angular-material-theme($passGen-theme);
